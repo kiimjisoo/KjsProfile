@@ -5,17 +5,19 @@ import Automation from "../images/automation.png";
 
 
 const CareerWrapper = styled.div`
-  margin: 100px 0;
+  padding: 100px 0 100px;
 `;
+
 const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;  
   .content {
+    color: ${props => props.theme.title};
     font-size: 55px;
     margin: 40px 0 10px;
-    border-bottom: 10px solid #EDCD1F;
+    border-bottom: 10px solid ${props => props.theme.main};
   }
 `;
 
@@ -34,7 +36,7 @@ const SubContent = styled.div`
 const ContainerText = styled.div`
   width: 330px;
   height: 200px;
-  background: #F7F7F7;
+  background: #CCD0E3;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -43,7 +45,7 @@ const ContainerText = styled.div`
   .context {
     font-size: 22px;
     line-height: 1.6rem;
-    color: #3D5975;
+    color: #383B6B;
     margin: 20px 0 0;
   }
   .date {
@@ -72,6 +74,15 @@ function Career(props) {
       <SubContent>
 
         <div className='container'>
+          <img className='photoimg' alt='img' src={Automation}/>
+          <ContainerText>
+            <h2 className='context'>프론트엔드</h2>
+            <p className='date'>2019.09 ~ 2020.10</p>
+            <h3 className='subcontainer'>PLC 프로그램 개발 보조<br/>전자캐드 작업<br/></h3>
+          </ContainerText>
+        </div>        
+
+        <div className='container'>
           <img className='photoimg' alt='img' src={Amkor}/>
           <ContainerText>
             <h2 className='context'>앰코 코리아</h2>
@@ -88,6 +99,8 @@ function Career(props) {
             <h3 className='subcontainer'>PLC 프로그램 개발 보조<br/>전자캐드 작업<br/></h3>
           </ContainerText>
         </div>
+
+
 
       </SubContent>
     </CareerWrapper>

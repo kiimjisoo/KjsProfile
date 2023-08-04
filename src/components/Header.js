@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
 const LogoWrapper = styled.div`
   width: 330px;
   height: 101px;
-  background: #EDCD1F;
+  background: ${props => props.theme.main};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,14 +35,15 @@ const LogoWrapper = styled.div`
     line-height: 1rem;
   }
   .sub {
-    font-size: 23px;
+    color: ${props => props.theme.subtext};
+    font-size: 26px;
     font-weight: 400;
   }
 `;
 const MenuWrapper = styled.div`
   flex-grow: 2;
   height: 101px;
-  background: #212B39;
+  background: ${props => props.theme.main};
 `;
 const Menu = styled.div`
 
@@ -56,11 +57,12 @@ const Menu = styled.div`
     flex-direction: row;
   }
   .nav-bar {
-    color: white;
+    font-size: 18px;
+    color: ${props => props.theme.subtext};
     margin: 0 35px;
     cursor: pointer;
     &:hover {
-      color: #EDCD1F;
+      color: ${props => props.theme.hover};
       transition: var(--trans,color .4s ease 0s);
     }
   }
@@ -73,8 +75,8 @@ function Header(props) {
       <HeaderWrapper>
         <LogoWrapper>
           <span className='logo'>
-            <span className='main'>S-PACE</span>
-            <span className='sub'>CONSTRUCTIONS</span>            
+            {/* <span className='main'></span> */}
+            <span className='sub'>contact</span>            
           </span>
         </LogoWrapper>
 

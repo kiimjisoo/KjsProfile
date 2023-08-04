@@ -4,10 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  main: '#383B6B', // 메인 컬러
+  subtext: '#fff', // 메뉴 텍스트
+  hover: '#9DA1E5', // 호버시 컬러
+  title: '#00083D'
+
+  
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App /> 
+    <ThemeProvider theme={theme}>
+      <App /> 
+    </ThemeProvider>
 
 );
 

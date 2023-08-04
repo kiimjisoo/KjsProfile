@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     box-sizing: border-box;
+    background: #F0F0F2;
   }
   * {
     box-sizing: border-box;

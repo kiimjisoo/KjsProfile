@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-const SkillWrapper = styled.div`
-  background: #EDCD1F;
+const Wrapper = styled.div`
   padding: 100px 0;
+`;
+const SkillWrapper = styled.div`
+  /* background: #9B96CB; */
+  background: rgba(155, 150, 203, 0.1);
+  padding: 80px 0 100px;
 `;
 
 const Skills = styled.div`
@@ -15,7 +18,7 @@ const Skills = styled.div`
 
   .maintitle {
     font-size: 60px;
-    color: #1E2d3b;
+    color: ${props => props.theme.title};
     /* border-bottom: 10px solid #1E2d3b; */
   }
 `;
@@ -37,14 +40,17 @@ const SkillName = styled.div`
     font-size: 30px;
     color: #3D5975;
     display: flex;
-    align-items: center;
-    border-left: 2px solid #fff;
+    /* align-items: center;
+    border-left: 2px solid #fff; */
     padding: 0 70px;
   }
 `;
 function Skill(props) {
   return (
-    <SkillWrapper id='3'>
+    <Wrapper id='3'>
+
+    
+    <SkillWrapper >
       <Skills>
         <h1 className='maintitle'>SKILLS</h1>
       </Skills>
@@ -57,6 +63,7 @@ function Skill(props) {
 
       </SkillName>
     </SkillWrapper>
+    </Wrapper>
   );
 }
 

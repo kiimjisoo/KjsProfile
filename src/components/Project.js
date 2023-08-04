@@ -5,7 +5,7 @@ import aqua from "../images/Aqua.png";
 import starbucks from "../images/starbucks.png";
 
 const ProjectWrapper = styled.div`
-  margin: 100px 0;
+  padding: 100px 0;
 `;
 
 const MainTitle = styled.div`
@@ -16,8 +16,8 @@ const MainTitle = styled.div`
 
   .title {
     font-size: 60px;
-    color: #1E2d3b;
-    border-bottom: 10px solid #EDCD1F;
+    color: ${props => props.theme.title};
+    border-bottom: 10px solid ${props => props.theme.main};
   }
 `;
 
@@ -51,7 +51,7 @@ const Title = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #3D5975;
+  border: 3px solid #E8D9FF;
   border-radius: 10px;
   width: 380px;
   height: 420px;
@@ -85,6 +85,7 @@ function Project(props) {
 
   return (
     <ProjectWrapper id='4'>
+
       <MainTitle>
         <h1 className='title'>Project</h1>
       </MainTitle>
@@ -141,7 +142,6 @@ function Project(props) {
 
 
       </AllContain>
-
 
     </ProjectWrapper>
   );

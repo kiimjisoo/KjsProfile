@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 const InfoWrapper = styled.div`
   display: flex;
   position: relative;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   padding: 30px 0;
@@ -21,31 +21,33 @@ const RightContent = styled.div`
 
   .title {
     font-size: 55px;
-    color: #1E2d3b;
+    color: ${props => props.theme.title};
     font-weight: 400;
     margin-bottom: 15px;
+    padding-bottom: 7px; 
+    border-bottom: 10px solid #383B6B;
   }
 `;
 
-const Box = styled.div`
-  width: 115px;
-  height: 10px;
-  background: #EDCD1F;
-  margin-bottom: 15px;
-`;
+
 
 const Container = styled.div`
 
-  .infotext {
+  .information {
     margin-top: 10px;
     font-size: 17px;
-    line-height: 1.1rem;
+    line-height: 1.3rem;
+  }
+  .infotext {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.8rem;
   }
   .link {
     text-decoration: none;
     color: #000;
     &:hover {
-      color: #EDCD1F;
+      color: #625BC9;
       text-decoration: underline;
     }
   }
@@ -66,32 +68,27 @@ function Info(props) {
     <Wrapper id='1'>
 
     
-    <InfoWrapper id='1'>
+    <InfoWrapper>
       <RightContent >
-        <h1 className='title'>소개</h1>
-        <Box>  </Box>
+        <h1 className='title'>김지수</h1>
         <Container>
-          <p className='infotext'>
+          <p className='information'>
             ☎️ CONTACT <br/>
             TEL : 010-4136-5150<br/>
             E-MAIL : jasoo22@naver.com<br/>
-            GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo</a>
+            GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a>
+            NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a>
           </p>
           <p className='infotext'>
-            회사가 원하는 스타일을 위한 나만의 홈페이지를<br/>
-            단순한 아이디어 구상부터 블로그 제작,<br/> 작품 시연, 쇼핑몰 운영, 비즈니스 홍보까지 온라인<br/>
-            세상에 펼쳐진 가능성은 여전히 무궁무진합니다.<br/>
+            고객이 원하는 스타일의 홈페이지를 구현합니다.<br/>
+            단순한 아이디어 구상부터 페이지 제작 등 가능합니다.<br/>
+            빠른 적응력과 습득력으로 업무에 임하겠습니다.<br/>
           </p>
           <p className='infotext'>
-            Wix는 사용자의 선호 및 필요에 따라 최고 수준의<br/>
-            홈페이지를 제작할수 있는 모든 솔루션을 갖추고<br/>
-            있습니다. 홈페이지 템플릿 컬렉션에서 마음에 드는<br/>
-            디자인을 선택한후, 원하는대로 편집해 나만의<br/>
-            홈페이지를 완성해 보세요!<br/>
           </p>
         </Container>
-
       </RightContent>  
+
       <LeftContent>
         <img className='photo' src={photo}/>
       </LeftContent>
