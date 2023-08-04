@@ -1,24 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+import { Route, Routes } from 'react-router';
+import Header from './components/Header';
+import MainVideo from './components/MainVideo';
+import Info from './components/Info';
+import Skill from './components/Skill';
+import Project from './components/Project';
+import Career from './components/Career';
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+
+  body {
+    box-sizing: border-box;
+  }
+  * {
+    box-sizing: border-box;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+          
+      <Header />
+      <Info />  
+      {/* <MainVideo /> */}
+      <Career />
+      <Skill />
+      <Project />
+
+      {/* <Routes>
+        <Route path='/' element={<Header />}>
+        <Route element={<MainVideo />}/>
+        </Route>
+      </Routes> */}
+    </>
   );
 }
 
