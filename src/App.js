@@ -9,6 +9,7 @@ import Info from './components/Info';
 import Skill from './components/Skill';
 import Project from './components/Project';
 import Career from './components/Career';
+import Contact from './components/Contact';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -33,6 +34,7 @@ function App() {
       <Career />
       <Skill />
       <Project />
+      <Contact />
 
       {/* <Routes>
         <Route path='/' element={<Header />}>

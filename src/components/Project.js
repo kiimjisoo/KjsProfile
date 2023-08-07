@@ -42,6 +42,14 @@ const MainContainer = styled.div`
       transition: 0.5s ease-in-out;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .movie {
+    width: 600px;
+    height: 380px;      
+    }
+
+  }
 `;
 
 const Title = styled.div`
@@ -73,7 +81,15 @@ const Title = styled.div`
   .subcontent {
     font-size: 17px;
   }
+  @media screen and (max-width: 767px) {
+    height: 340px;
+    weight: 280px;
+    
+  }
+  
+
 `;
+
 
 
 
@@ -133,7 +149,7 @@ function Project(props) {
           <Title>
             <h1 className='title'>Starbucks</h1>   
             <p className='content'>클론코딩<br/></p>
-            <p className='subcontent'>프론트엔드 스터디 첫 프로젝트<br/>수업시간에 배운 기능 첫 활용</p>
+            <p className='subcontent'>프론트엔드 스터디 첫 프로젝트<br/>수업시간에 배운 기능 활용</p>
           </Title> : 
         ""}
       </MainContainer> 

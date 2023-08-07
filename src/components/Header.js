@@ -13,51 +13,36 @@ const HeaderWrapper = styled.div`
   display: flex;
   width: 100%;
 `;
-const LogoWrapper = styled.div`
-  width: 330px;
+
+const MenuWrapper = styled.div`
   height: 101px;
+  width: 100%;
   background: ${props => props.theme.main};
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 
-  .logo {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .main {
-
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 1rem;
-  }
   .sub {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     color: ${props => props.theme.subtext};
     font-size: 26px;
     font-weight: 400;
   }
 `;
-const MenuWrapper = styled.div`
-  flex-grow: 2;
-  height: 101px;
-  background: ${props => props.theme.main};
-`;
-const Menu = styled.div`
 
+const Menu = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-top: 60px; 
-  /* margin-left: 400px; */
+  margin: 60px 0 10px; 
+
   .navWrapper {
     display: flex;
     flex-direction: row;
   }
   .nav-bar {
-    font-size: 18px;
+    font-size: 20px;
     color: ${props => props.theme.subtext};
     margin: 0 35px;
     cursor: pointer;
@@ -66,6 +51,12 @@ const Menu = styled.div`
       transition: var(--trans,color .4s ease 0s);
     }
   }
+  @media screen and (max-width: 767px) {
+    .nav-bar {
+      margin: 0 20px;
+    }
+  }
+  
 `;
 
 function Header(props) {
@@ -73,14 +64,9 @@ function Header(props) {
   return (
     <AllBlock>
       <HeaderWrapper>
-        <LogoWrapper>
-          <span className='logo'>
-            {/* <span className='main'></span> */}
-            <span className='sub'>contact</span>            
-          </span>
-        </LogoWrapper>
 
         <MenuWrapper>
+            <span className='sub'>contact</span>            
           <Menu>
             <ul className='navWrapper'>
               <li>

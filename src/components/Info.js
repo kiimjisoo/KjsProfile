@@ -15,6 +15,12 @@ const InfoWrapper = styled.div`
   flex-direction: row;
   padding: 30px 0;
   top: 80px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+
+  }
+
 `;
 
 const RightContent = styled.div`
@@ -27,20 +33,31 @@ const RightContent = styled.div`
     padding-bottom: 7px; 
     border-bottom: 10px solid #383B6B;
   }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
 `;
 
 
 
 const Container = styled.div`
 
-  .information {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  .text-info {
     margin-top: 10px;
     font-size: 17px;
-    line-height: 1.3rem;
+    line-height: 1.1rem;
   }
-  .infotext {
+  .introduce {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8rem;
   }
   .link {
@@ -50,6 +67,13 @@ const Container = styled.div`
       color: #625BC9;
       text-decoration: underline;
     }
+  }
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
   }
 `;
 
@@ -66,33 +90,31 @@ const LeftContent = styled.div`
 function Info(props) {
   return (
     <Wrapper id='1'>
+      <InfoWrapper>
 
-    
-    <InfoWrapper>
-      <RightContent >
-        <h1 className='title'>김지수</h1>
-        <Container>
-          <p className='information'>
-            ☎️ CONTACT <br/>
-            TEL : 010-4136-5150<br/>
-            E-MAIL : jasoo22@naver.com<br/>
-            GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a>
-            NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a>
-          </p>
-          <p className='infotext'>
-            고객이 원하는 스타일의 홈페이지를 구현합니다.<br/>
-            단순한 아이디어 구상부터 페이지 제작 등 가능합니다.<br/>
-            빠른 적응력과 습득력으로 업무에 임하겠습니다.<br/>
-          </p>
-          <p className='infotext'>
-          </p>
-        </Container>
-      </RightContent>  
+        <RightContent >
+          <h1 className='title'>김지수</h1>
+          <Container>
+            <p className='text-info'>☎️ CONTACT</p>
+            <p className='text-info'>TEL : 010-4136-5150</p>
+            <p className='text-info'>E-MAIL : jasoo22@naver.com</p>
+            <p className='text-info'>GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a></p>
+            <p className='text-info'>NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a></p>
+           </Container>
 
-      <LeftContent>
-        <img className='photo' src={photo}/>
-      </LeftContent>
-    </InfoWrapper>
+           <Container>
+            <p className='introduce'>고객이 원하는 스타일의 홈페이지를 구현합니다.</p>
+            <p className='introduce'>단순한 아이디어 구상부터 페이지 제작 등 가능합니다.</p>
+            <p className='introduce'>빠른 적응력과 습득력으로 업무에 임하겠습니다.</p>
+         
+          </Container>
+        </RightContent>  
+  
+        <LeftContent>
+          <img className='photo' src={photo}/>
+        </LeftContent>
+
+      </InfoWrapper>
     </Wrapper>
   );
 }
