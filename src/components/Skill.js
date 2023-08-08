@@ -8,8 +8,7 @@ const Wrapper = styled.div`
   }
 `;
 const SkillWrapper = styled.div`
-  background: orange;
-  /* background: rgba(155, 150, 203, 0.1); */
+  background: rgba(155, 150, 203, 0.1);
   padding: 80px 0 100px;
 
 `;
