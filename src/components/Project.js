@@ -45,10 +45,15 @@ const MainContainer = styled.div`
 
   @media screen and (max-width: 767px) {
     .movie {
-    width: 600px;
-    height: 380px;      
+      width: 600px;
+      height: 380px;      
     }
-
+  }
+  @media screen and (max-width: 479px) {
+    .movie {
+      width: 350px;
+      height: 195px;      
+    }
   }
 `;
 
@@ -84,7 +89,19 @@ const Title = styled.div`
   @media screen and (max-width: 767px) {
     height: 340px;
     weight: 280px;
-    
+  }
+  @media screen and (max-width: 479px) {
+    width: 260px;
+    height: 160px;    
+    .title {
+      font-size: 30px;
+    }  
+    .content {
+      font-size: 15px;
+    }  
+    .subcontent {
+      font-size: 13px;
+  }
   }
   
 

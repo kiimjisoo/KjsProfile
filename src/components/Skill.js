@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding: 100px 0;
+
 `;
 const SkillWrapper = styled.div`
   background: rgba(155, 150, 203, 0.1);
@@ -35,7 +36,16 @@ const SkillName = styled.div`
   @media screen and (max-width: 767px) {
     .skilltitle {
       padding: 0 30px;
+      
     }
+  }
+  @media screen and (max-width: 479px) {
+    
+    .skilltitle {
+      font-size: 20px;
+      padding: 0 10px;
+    }
+    
   }
 `;
 
@@ -47,7 +57,7 @@ function Skill(props) {
     
     <SkillWrapper >
       <Skills>
-        <h1 className='maintitle'>SKILLS</h1>
+        <h1 className='maintitle'>Skills</h1>
       </Skills>
       <SkillName>
         <h1 className='skilltitle'>HTML</h1>

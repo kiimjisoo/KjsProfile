@@ -29,6 +29,11 @@ const MenuWrapper = styled.div`
     font-size: 26px;
     font-weight: 400;
   }
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Menu = styled.div`
@@ -56,7 +61,12 @@ const Menu = styled.div`
       margin: 0 20px;
     }
   }
-  
+  @media screen and (max-width: 479px) {
+    margin: 10px;
+    .nav-bar {
+      margin: 0 10px;
+    }
+  }
 `;
 
 function Header(props) {
