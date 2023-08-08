@@ -82,6 +82,9 @@ const Container = styled.div`
     text-align: center;
     font-size: 18px;
    }
+   .text-container {
+    font-size: 18px;
+   }
     .link {
       display: none;
     }
@@ -90,7 +93,6 @@ const Container = styled.div`
 
 const LinkIcon = styled.div`
   display: none;
-  font-size: 35px;
   .icon-container {
     margin: 15px;
     color: ${props => props.theme.title};
@@ -132,9 +134,8 @@ function Info(props) {
            </Container>
 
             <LinkIcon>
-             <a className='icon-container' href='https://github.com/kiimjisoo'><AiFillGithub /></a>
-             <a className='icon-container' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'><RxNotionLogo /></a>
-              
+              <p className='text-container'>GITHUB : <a className='icon-container' href='https://github.com/kiimjisoo'><AiFillGithub /></a></p>
+              <p className='text-container'>NOTION : <a className='icon-container' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'><RxNotionLogo /></a> </p>
             </LinkIcon>
 
 
