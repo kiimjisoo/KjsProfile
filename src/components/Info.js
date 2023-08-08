@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import photo from "../images/image01.png";
+import { AiFillGithub } from "react-icons/ai";
+import { RxNotionLogo } from "react-icons/rx";
 
 
 const Wrapper = styled.div`
@@ -55,7 +57,7 @@ const Container = styled.div`
     font-size: 17px;
     line-height: 1.1rem;
   }
-  .introduce {
+  .introduce { 
     margin-top: 10px;
     font-size: 20px;
     line-height: 1.8rem;
@@ -75,6 +77,31 @@ const Container = styled.div`
     align-items: center;
     margin-bottom: 10px;
   }
+  @media screen and (max-width: 479px) {
+   .introduce {
+    text-align: center;
+    font-size: 18px;
+   }
+    .link {
+      display: none;
+    }
+  }
+`;
+
+const LinkIcon = styled.div`
+  display: none;
+  font-size: 35px;
+  .icon-container {
+    margin: 15px;
+    color: ${props => props.theme.title};
+    &:hover {
+      color: ${props => props.theme.hover};
+    }
+  }
+  @media screen and (max-width: 479px) {
+    display: flex;
+  }
+
 `;
 
 const LeftContent = styled.div`
@@ -98,9 +125,19 @@ function Info(props) {
             <p className='text-info'>☎️ CONTACT</p>
             <p className='text-info'>TEL : 010-4136-5150</p>
             <p className='text-info'>E-MAIL : jasoo22@naver.com</p>
-            <p className='text-info'>GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a></p>
-            <p className='text-info'>NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a></p>
+            <div className='link'>
+              <p className='text-info'>GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a></p>
+              <p className='text-info'>NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a></p>
+            </div>
            </Container>
+
+            <LinkIcon>
+             <a className='icon-container' href='https://github.com/kiimjisoo'><AiFillGithub /></a>
+             <a className='icon-container' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'><RxNotionLogo /></a>
+              
+            </LinkIcon>
+
+
 
            <Container>
             <p className='introduce'>고객이 원하는 스타일의 홈페이지를 구현합니다.</p>

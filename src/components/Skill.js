@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding: 100px 0;
-
+  @media screen and (max-width: 479px) {
+    width: 100%; 
+  }
 `;
 const SkillWrapper = styled.div`
-  background: rgba(155, 150, 203, 0.1);
+  background: orange;
+  /* background: rgba(155, 150, 203, 0.1); */
   padding: 80px 0 100px;
+
 `;
 
 const Skills = styled.div`
@@ -36,7 +40,6 @@ const SkillName = styled.div`
   @media screen and (max-width: 767px) {
     .skilltitle {
       padding: 0 30px;
-      
     }
   }
   @media screen and (max-width: 479px) {
@@ -45,7 +48,6 @@ const SkillName = styled.div`
       font-size: 20px;
       padding: 0 10px;
     }
-    
   }
 `;
 

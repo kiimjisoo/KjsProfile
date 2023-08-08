@@ -19,6 +19,10 @@ const MainContent = styled.div`
     margin: 40px 0 10px;
     border-bottom: 10px solid ${props => props.theme.main};
   }
+  @media screen and (max-width: 479px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const SubContent = styled.div`
