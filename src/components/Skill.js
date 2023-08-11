@@ -65,7 +65,7 @@ function Skill(props) {
         <h1 className='skilltitle'>CSS</h1>
         <h1 className='skilltitle'>JavaScript</h1>
         <h1 className='skilltitle'>React</h1>
-        <h1 className='skilltitle'>HTML5</h1>
+
 
       </SkillName>
     </SkillWrapper>

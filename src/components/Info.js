@@ -56,12 +56,15 @@ const Container = styled.div`
     margin-top: 10px;
     font-size: 17px;
     line-height: 1.1rem;
+    text-decoration: none ;
   }
+
   .introduce { 
     margin-top: 10px;
     font-size: 20px;
     line-height: 1.8rem;
   }
+
   .link {
     text-decoration: none;
     color: #000;
@@ -102,6 +105,7 @@ const LinkIcon = styled.div`
   }
   @media screen and (max-width: 479px) {
     display: flex;
+    
   }
 
 `;
@@ -127,9 +131,9 @@ function Info(props) {
             <p className='text-info'>☎️ CONTACT</p>
             <p className='text-info'>TEL : 010-4136-5150</p>
             <p className='text-info'>E-MAIL : jasoo22@naver.com</p>
-            <div className='link'>
+            <div className='link-contain'>
               <p className='text-info'>GITHUB : <a className='link' href='https://github.com/kiimjisoo'>https://github.com/kiimjisoo<br/></a></p>
-              <p className='text-info'>NOTION : <a className='link' href='https://www.notion.so/684f56c7421340a9971216d25a4e696b'>https://www.notion.so/684f56c7421340a9971216d25a4e696b</a></p>
+              <p className='text-info'>NOTION : <a className='link' href='https://efficient-mulberry-932.notion.site/684f56c7421340a9971216d25a4e696b?pvs=4'>https://efficient-mulberry-932.notion.site/684f56c7421340a9971216d25a4e696b?pvs=4</a></p>
             </div>
            </Container>
 
